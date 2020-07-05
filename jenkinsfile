@@ -6,22 +6,8 @@ pipeline
     stage ('git clone')
     {
       steps
-          { sh 'echo downloading code' }
+          { git 'https://github.com/SagarPatil1086/PipelineProject.git' }
     }
-    stage ('code build')
-    {
-      steps
-          { sh 'echo code is building' }
-    }
-    stage ('get approval')
-    {
-      steps
-          { input "please approve the deployment?" }
-    }
-    stage ('deployment')
-    {
-      steps
-          { sh 'echo code is deploying' }
-    }
+ 
   }
 }
